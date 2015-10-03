@@ -36,13 +36,13 @@ scrapeNBAgames <- function(Season){
   return(ret)
 }
 
-
+if (F){
 for (year in 2005:2015){
   assign(paste0('NBA',year),scrapeNBAgames(year))
   save(list=paste0('NBA',year),file=paste0('season_data/NBA',year,'.Rdata'),row.names=F)
   print(year)
 }
-
+}
 
 
 
